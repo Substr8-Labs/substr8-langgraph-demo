@@ -1,6 +1,6 @@
 # Substr8 LangGraph Demo
 
-**Generate and verify a cryptographically signed receipt for an AI agent in under 60 seconds.**
+Generate cryptographically verifiable RunProofs from LangGraph workflows.
 
 ## Quick Start
 
@@ -10,108 +10,45 @@ cd substr8-langgraph-demo
 ./run_demo.sh
 ```
 
-Or with make:
+## Installation
 
 ```bash
-make demo
+pip install -r requirements.txt
 ```
 
-## Expected Output
-
-```
-🔧 Installing dependencies...
-🚀 Running demo agent...
-
-============================================================
-Substr8 LangGraph Demo - Verifiable Agent Execution
-============================================================
-
-🔧 Instrumenting graph with Substr8...
-🚀 Running agent...
-
-📋 Execution Steps:
-   • Searched for: AI agent governance
-   • Analyzed 3 sources
-   • Generated summary
-
-============================================================
-✅ RunProof generated: runproof.json
-
-   Proof ID:  proof_ccfe7c4abd014eab
-   Run ID:    run_ade859b400e24d09
-   Agent:     demo/research-agent
-   Events:    6
-   Status:    verified
-============================================================
-
-🔍 Verifying RunProof...
-
-╭──────────────────────────── Verification Result ─────────────────────────────╮
-│ ✓ RunProof: VALID                                                            │
-╰──────────────────────────────────────────────────────────────────────────────╯
-
-Checks:
-  ✓ schema
-  ✓ hash_chain
-  ✓ merkle_root
-  ✓ signature
-```
-
-## Verify Without Running
-
-A sample proof is included. Test verification immediately:
+## Usage
 
 ```bash
-pip install substr8
-substr8 proof verify sample_runproof.json
+# Run the demo agent
+python demo_agent.py
+
+# Verify the generated proof
+substr8 proof verify runproof.json
+
+# Inspect proof details
+substr8 proof inspect runproof.json --events
 ```
 
-## What This Demo Does
+## RunProof v2.1 Features
 
-1. **Builds a LangGraph agent** — Research agent with search → analyze → summarize flow
-2. **Wraps it with Substr8** — `instrument_graph()` captures every event
-3. **Generates a RunProof** — Cryptographic receipt with hash chain + Merkle root + signature
-4. **Verifies the proof** — CLI confirms the proof is valid and untampered
+This demo generates RunProof v2.1 artifacts with:
 
-## Files
+- **Claims** — Policy, model, environment metadata
+- **Lineage** — Chainable proofs for workflows
+- **Expanded Issuer** — Name, version, runtime info
 
-| File | Description |
-|------|-------------|
-| `demo_agent.py` | LangGraph agent with Substr8 instrumentation |
-| `runproof.json` | Generated proof (created when you run the demo) |
-| `sample_runproof.json` | Pre-generated proof for immediate testing |
-| `run_demo.sh` | One-command demo script |
-| `Makefile` | `make demo` target |
+See `sample_runproof.json` for an example.
 
-## Verify in Browser
+## Verification
 
-Upload `runproof.json` to [verify.substr8labs.com](https://verify-ui-gamma.vercel.app)
+[![RunProof Verified](https://verify.substr8labs.com/badge/proof_demo_v21_001)](https://verify.substr8labs.com/proof/proof_demo_v21_001)
 
-## Show Your RunProof
+## Links
 
-Add a verified badge to your README:
+- [Documentation](https://docs.substr8labs.com)
+- [RunProof Specification](https://docs.substr8labs.com/spec)
+- [Cookbook](https://docs.substr8labs.com/cookbook)
 
-```markdown
-[![RunProof Verified](https://verify-ui-gamma.vercel.app/badge/YOUR_PROOF_ID)](https://verify-ui-gamma.vercel.app)
-```
+## License
 
-Generate the badge snippet:
-
-```bash
-substr8 badge proof_ccfe7c4abd014eab
-```
-
-**Why?** Show that your agent's execution is cryptographically verified. Other developers will ask "What is that?" — and discover Substr8.
-
----
-
-## Learn More
-
-- [Docs](https://docs.substr8labs.com)
-- [How Verification Works](https://docs.substr8labs.com/verification)
-- [RunProof Schema](https://docs.substr8labs.com/runproof)
-- [GitHub](https://github.com/Substr8-Labs)
-
----
-
-**Agents with receipts.** 🧾
+MIT
