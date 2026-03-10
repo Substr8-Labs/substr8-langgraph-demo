@@ -1,0 +1,144 @@
+{
+  "schema_version": "runproof/v2",
+  "header": {
+    "proof_id": "proof_ccfe7c4abd014eab",
+    "run_id": "run_ade859b400e24d09",
+    "tenant_id": null,
+    "agent_id": "demo/research-agent",
+    "agent_version_hash": null,
+    "runtime": "langgraph",
+    "runtime_version": null,
+    "started_at": "2026-03-10T08:10:33.081970Z",
+    "ended_at": "2026-03-10T08:10:33.085795Z",
+    "status": "completed",
+    "parent_run_id": null,
+    "session_id": null,
+    "workflow_id": null
+  },
+  "identity": {
+    "signer": {
+      "key_id": "ephemeral_run_ade859b400e24d09",
+      "public_key": "ed25519:09f2cb092ea8af1c94689b6cda0f80fe3b0430095a3709f51fa098b13da9197c",
+      "issuer": "substr8-langgraph"
+    },
+    "policy": null
+  },
+  "context": {
+    "trigger_type": "api",
+    "input_hash": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "input_redaction_mode": "hashed",
+    "model": null,
+    "tools_available": []
+  },
+  "trace": [
+    {
+      "seq": 1,
+      "event_id": "evt_db22c67d6ef1",
+      "type": "run_started",
+      "timestamp": "2026-03-10T08:10:33.082054Z",
+      "prev_hash": null,
+      "payload_hash": "sha256:32369c6fb02a87a7dc5de0bfec22c074c90340924d0cdbee33b5244bb8379821",
+      "payload_ref": null,
+      "payload": {
+        "agent_id": "demo/research-agent"
+      },
+      "entry_hash": "sha256:559fe8cee19b9f11fefeb5b3d75aa07e657b214ec436bd23ffaa631498297b95"
+    },
+    {
+      "seq": 2,
+      "event_id": "evt_ab67952b1fdc",
+      "type": "node_completed",
+      "timestamp": "2026-03-10T08:10:33.084498Z",
+      "prev_hash": "sha256:559fe8cee19b9f11fefeb5b3d75aa07e657b214ec436bd23ffaa631498297b95",
+      "payload_hash": "sha256:81da3e81ebd668c8244d8184d5bd44286ec73fd55051370e0a2bf13e4114569f",
+      "payload_ref": null,
+      "payload": {
+        "node": "node",
+        "outputs_hash": "sha256:c0b244f38e19a5ad942f4084865252c1d7de3b516905e7016b810766a2924c03"
+      },
+      "entry_hash": "sha256:a0facd669dc2461dc90bc5551a32e993fb03abf52d74217cc628cf2e80e21cf4"
+    },
+    {
+      "seq": 3,
+      "event_id": "evt_71a452a832a8",
+      "type": "node_completed",
+      "timestamp": "2026-03-10T08:10:33.085197Z",
+      "prev_hash": "sha256:a0facd669dc2461dc90bc5551a32e993fb03abf52d74217cc628cf2e80e21cf4",
+      "payload_hash": "sha256:adab65f65ee6444a1e0a578ea092e7ddb5afc3000de73e27b0526777adc209d4",
+      "payload_ref": null,
+      "payload": {
+        "node": "node",
+        "outputs_hash": "sha256:d4064afbcf81c7f39c94aa26812c767281417a573077306e96ea1b5ae6c0bdf8"
+      },
+      "entry_hash": "sha256:95a4e8d005702bc37841047a3ecb4280a8917a59bb915ee523eda01dd8402991"
+    },
+    {
+      "seq": 4,
+      "event_id": "evt_17b2322bdb25",
+      "type": "node_completed",
+      "timestamp": "2026-03-10T08:10:33.085569Z",
+      "prev_hash": "sha256:95a4e8d005702bc37841047a3ecb4280a8917a59bb915ee523eda01dd8402991",
+      "payload_hash": "sha256:b82cdd1799d96dd2f9c10b5120d367ae0dfb3f8c26fcdb852fb9210be321f460",
+      "payload_ref": null,
+      "payload": {
+        "node": "node",
+        "outputs_hash": "sha256:85aa9d5eae87741228270ab720d2ccee4051ec68a41030bf36fa06dded4666c9"
+      },
+      "entry_hash": "sha256:4ef791454bde7f0530de04d23466f3b8f8b5c73570d613cf7534eb17b916c1e6"
+    },
+    {
+      "seq": 5,
+      "event_id": "evt_03300560c8b2",
+      "type": "node_completed",
+      "timestamp": "2026-03-10T08:10:33.085751Z",
+      "prev_hash": "sha256:4ef791454bde7f0530de04d23466f3b8f8b5c73570d613cf7534eb17b916c1e6",
+      "payload_hash": "sha256:2cbb47392f4d5fd8c5f5f9f31833cb72112a25e4259294e087068c7876be296a",
+      "payload_ref": null,
+      "payload": {
+        "node": "node",
+        "outputs_hash": "sha256:50ac1f82766b184e3d70cd36a8a1474dd0ed0f9fed413ec992138a3aa5bec57f"
+      },
+      "entry_hash": "sha256:b8690712562ee682c090446a9a9c4e8d35adee33aa8f429578654bd5167d12b3"
+    },
+    {
+      "seq": 6,
+      "event_id": "evt_0838c663f7c1",
+      "type": "run_completed",
+      "timestamp": "2026-03-10T08:10:33.085819Z",
+      "prev_hash": "sha256:b8690712562ee682c090446a9a9c4e8d35adee33aa8f429578654bd5167d12b3",
+      "payload_hash": "sha256:d0765f73cd5d1df39be353d538ea7c47a017d66a8bd001dc4707240dbb71e58c",
+      "payload_ref": null,
+      "payload": {
+        "status": "completed"
+      },
+      "entry_hash": "sha256:113c59eb2ed5335275a72ebef0d9ce3151b4b2307b60e5129c10f99c496c7206"
+    }
+  ],
+  "outputs": {
+    "result_hash": "sha256:50ac1f82766b184e3d70cd36a8a1474dd0ed0f9fed413ec992138a3aa5bec57f",
+    "result_redaction_mode": "hashed",
+    "artifacts": []
+  },
+  "commitments": {
+    "event_root": "sha256:ba56701f663b204dccafc93968d34207de6b909dd7fd4799d3c1a17ad151ffa3",
+    "proof_hash": "sha256:a65b14e11a1a96a436e3adcc129813c10538d50f1e6e8cd46ab4fcb8a3a9f723",
+    "signature": {
+      "algorithm": "ed25519",
+      "value": "/i4PA/caaCadEtQtUmgBBXd6dpVdfxRqe6xWf3hS6t3OyRxRwWQCvn2lNIVWiktkjcXxdeKmh212BIr75xntAg=="
+    }
+  },
+  "anchors": {
+    "registry_id": null,
+    "registry_anchor_hash": null,
+    "transparency_log_entry": null
+  },
+  "metadata": {
+    "tags": [
+      "langgraph",
+      "substr8-demo"
+    ],
+    "custom": {
+      "sdk_version": "substr8-langgraph/0.1.0"
+    }
+  }
+}
