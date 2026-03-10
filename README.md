@@ -87,6 +87,24 @@ substr8 proof verify sample_runproof.json
 
 Upload `runproof.json` to [verify.substr8labs.com](https://verify-ui-gamma.vercel.app)
 
+## Show Your RunProof
+
+Add a verified badge to your README:
+
+```markdown
+[![RunProof Verified](https://verify-ui-gamma.vercel.app/badge/YOUR_PROOF_ID)](https://verify-ui-gamma.vercel.app)
+```
+
+Generate the badge snippet:
+
+```bash
+substr8 badge proof_ccfe7c4abd014eab
+```
+
+**Why?** Show that your agent's execution is cryptographically verified. Other developers will ask "What is that?" — and discover Substr8.
+
+---
+
 ## Learn More
 
 - [Docs](https://docs.substr8labs.com)
