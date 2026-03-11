@@ -41,7 +41,7 @@ See `sample_runproof.json` for an example.
 
 ## Verification
 
-[![RunProof Verified](https://verify.substr8labs.com/badge/proof_demo_v21_001)](https://verify.substr8labs.com/proof/proof_demo_v21_001)
+[![RunProof Verified](https://runproof.substr8labs.com/badge/proof_demo_v21_001)](https://runproof.substr8labs.com/proof/proof_demo_v21_001)
 
 ## Links
 
